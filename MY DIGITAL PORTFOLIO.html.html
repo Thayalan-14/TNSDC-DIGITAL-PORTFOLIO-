@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <style>
+    /* Reset */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    /* Navbar */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(0,0,0,0.6);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+    }
+    nav h1 {
+      font-size: 22px;
+      color: #ffd369;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    nav ul li a:hover {
+      color: #ffd369;
+    }
+
+    /* Hero Section */
+    .hero {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+    }
+    .hero img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 4px solid #ffd369;
+      margin-bottom: 20px;
+      animation: float 3s infinite ease-in-out;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-15px); }
+    }
+    .hero h2 {
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      color: #eee;
+    }
+
+    /* Sections */
+    section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 80px 20px;
+    }
+    section h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 2.2rem;
+      color: #ffd369;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 15px;
+      padding: 30px;
+      margin-bottom: 20px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    /* Certificates Grid */
+    .certificates-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .certificates-grid img {
+      width: 100%;
+      border-radius: 12px;
+      border: 2px solid #ffd369;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .certificates-grid img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(255, 211, 105, 0.7);
+    }
+
+    /* Contact */
+    .contact {
+      text-align: center;
+    }
+    .contact p {
+      margin: 10px 0;
+      font-size: 1.1rem;
+    }
+
+    /* Footer */
+    footer {
+      background: rgba(0,0,0,0.6);
+      backdrop-filter: blur(10px);
+      text-align: center;
+      padding: 20px;
+      color: #eee;
+      margin-top: 40px;
+    }
+
+    /* Scroll Animations */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease-in-out;
+    }
+    .fade-in.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <h1>My Portfolio</h1>
+    <ul>
+      <li><a href="#bio">Bio</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#certificates">Certificates</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <div class="hero">
+    <img src="my photo.jpg" alt="My Photo">
+    <h2>Thayalan M</h2>
+    <p>Student</p>
+  </div>
+
+  <!-- Bio Section -->
+  <section id="bio" class="fade-in">
+    <h2>Bio Data</h2>
+    <div class="card">
+      <p><strong>Name:</strong> Thayalan M</p>
+      <p><strong>Date of Birth:</strong> 10/12/2005</p>
+      <p><strong>Address:</strong> No 7/18 Gandhi Street</p>
+      <p><strong>Email:</strong> 24h114@amjaincollege.edu.in</p>
+      <p><strong>Phone:</strong> 9629679501</p>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education" class="fade-in">
+    <h2>Education</h2>
+    <div class="card">
+      <p><strong>College:</strong> S.C.S Matriculation Higher Secondary School</p>
+      <p><strong>Year of Completion:</strong> 2024</p>
+      <p><strong>Percentage:</strong> 72%</p>
+      <p><strong>Current Institution:</strong> AM Jain College</p>
+      <p><strong>Course:</strong> BCA</p>
+      <p><strong>Year of Study:</strong> Second Year</p>
+    </div>
+  </section>
+
+  <!-- Certificates Section -->
+  <section id="certificates" class="fade-in">
+    <h2>Certificates</h2>
+    <div class="certificates-grid">
+      <img src="certififcate 1.png" alt="Certificate 1">
+      <img src="certififcate 2.png" alt="Certificate 2">
+      <img src="certififcate 3.png" alt="Certificate 3">
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="fade-in">
+    <h2>Contact Me</h2>
+    <div class="card contact">
+      <p>📧 Email: 24h114@amjaincollege.edu.in</p>
+      <p>📞 Phone: 9629679501</p>
+      <p>📍 Address: No 7/18 Gandhi Street</p>
+    </div>
+  </section>
+
+  <script>
+    // Scroll animation
+    const elements = document.querySelectorAll('.fade-in');
+    window.addEventListener('scroll', () => {
+      elements.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 50) {
+          el.classList.add('show');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
